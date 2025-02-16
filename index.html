@@ -67,63 +67,7 @@
 	    width: 120px;
 	}
 
-	         /* Mengatur kontainer div agar teks berada di tengah */
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center; /* Menambahkan text-align center untuk meratakan teks */
-        }
-
-        /* Gaya umum untuk semua teks */
-        .animated-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #003366; /* Warna biru gelap */
-            opacity: 0;
-            animation: fadeIn 3s ease-in-out forwards, slideIn 2s ease-in-out forwards;
-            margin: 10px; /* Jarak antar teks */
-        }
-
-        /* Animasi Fade In */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Animasi Slide In */
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        /* Mengubah warna setiap beberapa detik */
-        @keyframes colorChange {
-            0% {
-                color: #003366; /* Biru gelap */
-            }
-            50% {
-                color: #0066cc; /* Biru cerah */
-            }
-            100% {
-                color: #003366; /* Kembali ke biru gelap */
-            }
-        }
-
-        /* Menambahkan animasi perubahan warna pada teks */
-        .color-change {
-            animation: colorChange 5s infinite;
-        }
+	
   </style> 
 </head>
 
