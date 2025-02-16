@@ -36,11 +36,7 @@
   ======================================================= -->
   
  <style >
-	 h4 {
-	  font-size: 25px;
-	  font-family: Arial, Helvetica, sans-serif;
-	  color: blue;
-	}
+	
   /* Ikon WhatsApp di pojok kanan bawah */
         .whatsapp-float {
             position: fixed;
@@ -66,11 +62,68 @@
         }
 		
 
-#logo img {
-    height: 60px; /* Sesuaikan ukuran */
-    width: 120px;
-}
+	#logo img {
+	    height: 60px; /* Sesuaikan ukuran */
+	    width: 120px;
+	}
 
+	         /* Mengatur kontainer div agar teks berada di tengah */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center; /* Menambahkan text-align center untuk meratakan teks */
+        }
+
+        /* Gaya umum untuk semua teks */
+        .animated-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003366; /* Warna biru gelap */
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards, slideIn 2s ease-in-out forwards;
+            margin: 10px; /* Jarak antar teks */
+        }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi Slide In */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Mengubah warna setiap beberapa detik */
+        @keyframes colorChange {
+            0% {
+                color: #003366; /* Biru gelap */
+            }
+            50% {
+                color: #0066cc; /* Biru cerah */
+            }
+            100% {
+                color: #003366; /* Kembali ke biru gelap */
+            }
+        }
+
+        /* Menambahkan animasi perubahan warna pada teks */
+        .color-change {
+            animation: colorChange 5s infinite;
+        }
   </style> 
 </head>
 
@@ -137,7 +190,15 @@
   <section id="intro">
 
     <div class="intro-content">
-      <h4>Perawat Medis<br>Perawat Visit<br>Perawat Home Care<br>Perawat Pasang NGT<br>Perawat Luka<br>Perawat Infus</h4>
+	        <div class="container">
+		        <p class="animated-text">Perawat Medis</p>
+				<p class="animated-text">Perawat Visit</p>
+		        <p class="animated-text">Perawat Home Care</p>
+		        <p class="animated-text">Perawat Pasang NGT</p>
+		        <p class="animated-text">Perawat Luka</p>
+		        <p class="animated-text color-change">Perawat Infus</p>
+   		 </div>
+      
      <!-- <div>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
         <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
